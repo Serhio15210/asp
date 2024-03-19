@@ -1,0 +1,141 @@
+@import "_variables.css";
+nav{
+    button{
+        padding: 10px 15px;
+    }
+}
+.burgerImg{
+    display: none;
+    width: 40px;
+}
+.mobileMenu{
+    transform: translateY(-100%);
+    transition: transform var(--slow) easy-in-out;
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    background: var(--blue);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    animation: fadeInDown 0.3s linear forwards;
+    img{
+        width: 40px;
+        align-self: flex-end;
+    }
+}
+.mobileMenu.active {
+    display: flex;
+}
+
+/* Анимация */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.logoBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: white;
+
+    img {
+        width: 170px;
+        height: 80px;
+        position: relative;
+        top: 5px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.navButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.navItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all var(--slow) ease-in-out;
+    position: relative;
+}
+.active{
+    color: var(--yellowLight);
+}
+.navItem:before {
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    content: '';
+    background: transparent;
+    height: 2px;
+    width: 100%;
+    transition: all var(--slow) ease-in-out;
+}
+
+.navItem:hover {
+    color: var(--yellowLight);
+}
+
+.navItem:hover:before {
+
+    background: var(--yellowLight);
+
+}
+.active:before {
+
+    background: var(--yellowLight);
+
+}
+@media screen and (max-width: 700px) {
+    nav{
+        button{
+            display: none;
+        }
+        .navButtons{
+            display: none;
+        }
+    }
+    .burgerImg{
+        display: block;
+    }
+    .logoBlock {
+        img {
+            width: 120px;
+            height: 80px;
+            left: -15px;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    nav{
+        button{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@{
+    ViewData["Title"] = "Contacts";
+}
+@model Contact 
+<div class="homeMain">
+    <div class="serviceBlock">
+        <h1>Contacts</h1>
+        <img src="~/images/divider.png" alt=""/>
+    </div>
+    @* <div class="contactsBlock"> *@
+    @*     <div class="textContacts"> *@
+    @*         <div> *@
+    @*             <h2>Email</h2> *@
+    @*             <p>email@gmail.com</p> *@
+    @*         </div> *@
+    @*         <div> *@
+    @*             <h2>Phone</h2> *@
+    @*             <p>+380977032200</p> *@
+    @*         </div> *@
+    @*         <div> *@
+    @*             <h2>Telegram</h2> *@
+    @*             <p>telegram@url</p> *@
+    @*         </div> *@
+    @*         <div> *@
+    @*             <h2>Instagram</h2> *@
+    @*             <p>instagram@url</p> *@
+    @*         </div> *@
+    @*         <div> *@
+    @*             <h2>Twitter</h2> *@
+    @*             <p>twitter@url</p> *@
+    @*         </div> *@
+    @*          *@
+    @*     </div> *@
+    @*     <div class="inputBlock"> *@
+    @*         <h2>Contact with us</h2> *@
+    @*         <form> *@
+    @*             <input placeholder="Name..."/> *@
+    @*             <input placeholder="Email..."/> *@
+    @*             <textarea placeholder="Text..."></textarea> *@
+    @*             <button type="submit">Send</button> *@
+    @*         </form> *@
+    @*     </div> *@
+    @* </div> *@
+    <div class="servicesRow">
+        <div class="service">
+            <h2>Email</h2>
+            <img src="~/images/divider.png" alt=""/>
+            <p>
+                email@gmail.com
+            </p>
+        </div>
+        <div class="service">
+            <h2>Phone</h2>
+            <img src="~/images/divider.png" alt=""/>
+            <p>
+                +380977032200
+            </p>
+        </div>
+        <div class="service">
+            <h2>Telegram</h2>
+            <img src="~/images/divider.png" alt=""/>
+            <p>
+                telegram@url
+            </p>
+        </div>
+        <div class="service">
+            <h2>Instagram</h2>
+            <img src="~/images/divider.png" alt=""/>
+            <p>
+                instagram@url
+            </p>
+        </div>
+    </div>
+    <div class="contactsBlock">
+        <div class="inputBlock">
+                    <h2>Contact with us</h2>
+                    <form method="post" asp-controller="Contacts" asp-action="Check">
+                        <div>
+                            <input asp-for="Name" placeholder="Name..."/>
+                            <span asp-validation-for="Name"></span>
+                        </div>
+                        <div>
+                            <input asp-for="Phone" placeholder="Phone..." type="number"/>
+                            <span asp-validation-for="Phone"></span>
+                        </div>
+                        <div>
+                            <input asp-for="Email" placeholder="Email..." type="email"/>
+                            <span asp-validation-for="Email"></span>
+                        </div>
+                        <div>
+                            <textarea asp-for="Text" placeholder="Text..."></textarea>
+                            <span asp-validation-for="Text"></span>
+                        </div>
+                       
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+    </div>
+     
+</div>

@@ -1,0 +1,31 @@
+<aboutTrips>
+    <item>
+        <name>Bora Bora</name>
+        <text>Discover the enchanting allure of Bora Bora,
+            where pristine beaches meet crystalline lagoons in a breathtaking tropical haven.
+            Unwind in luxurious overwater bungalows with unparalleled views of Mount Otemanu, and immerse yourself in
+            the vibrant coral gardens during exhilarating snorkeling adventures. Indulge in romantic sunsets, explore
+            Polynesian culture, and create lifelong memories in this idyllic South Pacific paradise.
+            Bora Bora offers the perfect blend of relaxation and adventure, making it a destination like no other.
+        </text>
+        <image>bora.jpg</image>
+    </item>
+    <item>
+        <name>Egypt</name>
+        <text>Embark on a journey to the captivating land of Egypt, where ancient wonders and modern marvels
+            seamlessly coexist. Explore the awe-inspiring Pyramids of Giza, a testament to the country's rich history,
+            and cruise along the serene Nile River, immersing yourself in timeless landscapes. Uncover the mysteries of
+            Luxor's temples and tombs, and dive into the vibrant bazaars of Cairo for an authentic taste of Egyptian
+            culture.
+        </text>
+        <image>egypt.jpg</image>
+    </item>
+    <item>
+        <name>Thailand</name>
+        <text>Escape to the enchanting shores of Thailand, where azure waters, lush jungles, and vibrant culture
+            converge to create an unparalleled tropical paradise. Unwind on pristine beaches, such as Phuket's Patong or
+            Krabi's Railay, and indulge in a blissful retreat surrounded by stunning limestone cliffs.
+        </text>
+        <image>thailand.jpg</image>
+    </item>
+</aboutTrips>

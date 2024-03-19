@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<homeData>
+    <tripData>
+        <item>
+             <from>USA,Boston</from>
+             <to>France,Paris</to>
+             <amount>1200</amount>
+             <price>480</price>
+        </item>
+        <item>
+            <from>Ukraine,Kyiv</from>
+            <to>Spain,Barcelona</to>
+            <amount>1500</amount>
+            <price>600</price>
+        </item>
+        <item>
+            <from>Poland,Varshava</from>
+            <to>UK,London</to>
+            <amount>950</amount>
+            <price>350</price>
+        </item>
+        <item>
+            <from>Ukraine,Odesa</from>
+            <to>Egypt,Sharm El Sheikh</to>
+            <amount>1300</amount>
+            <price>520</price>
+        </item>
+        <item>
+            <from>Netherlands,Amsterdam</from>
+            <to>Italy,Venice</to>
+            <amount>1000</amount>
+            <price>350</price>
+        </item>
+    </tripData>
+</homeData>

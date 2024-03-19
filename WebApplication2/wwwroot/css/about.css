@@ -1,0 +1,45 @@
+.aboutTitleBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.aboutSelectBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    select{
+        align-self: flex-start;
+        border: 2px solid var(--blue);
+        border-radius: 5px;
+        max-width: 500px;
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+    }
+    .selectContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+        justify-content: space-between;
+        margin-top: 20px;
+        .image{
+            width: clamp(400px, 55%, 800px)
+        }
+        .selectText{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: flex-start;
+            width: 50%;
+            font-size: 24px;
+            img{
+                width: 50px;
+            }
+        }
+    }
+}

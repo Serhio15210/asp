@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Paradise Travel";
+}
+@model List<TripTable>
+<div>
+    <div class="homeBg">
+        <div class="homeContainer">
+            <h1 >MAKE YOUR VACATION <br/>COMFORTABLE</h1>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <div class="homeMain">
+        <div class="infoContainer">
+            <div class="textBlock">
+                <h2>UNIQUE TRAVEL INSIGHTS</h2>
+                <img src="~/images/divider.png" alt=""/>
+                <p>
+                    Our team is ready to provide you with unique weekly travel insights that include photos, videos,
+                    and articles about untravelled tourist paths. We know everything about the places you’ve never been to!
+                </p>
+                <button>Learn More</button>
+            </div>
+            <img src="~/images/infoCard1.jpg" alt="" class="cardPhoto"/>
+        </div>
+        <div class="infoContainer reverse">
+            <div class="textBlock">
+                <h2>THE TRIP OF YOUR DREAM</h2>
+                <img src="~/images/divider.png" alt=""/>
+                <p>
+                    Our travel agency is ready to offer you an exciting vacation that is designed to fit your own needs and wishes.
+                    Whether it’s an exotic cruise or a trip to your favorite resort, you will surely have the best experience.
+                </p>
+                <button>Learn More</button>
+            </div>
+            <img src="~/images/infoCard2.jpg" alt="" class="cardPhoto"/>
+        </div>
+        <div class="infoContainer">
+            <div class="textBlock">
+                <h2>HUNDREDS OF AMAZING DESTINATIONS</h2>
+                <img src="~/images/divider.png" alt=""/>
+                <p>
+                    We offer a variety of destinations to travel to, ranging from exotic to some extreme ones.
+                    They include very popular countries and cities like Paris, Rio de Janeiro, Cairo and a lot of others.
+                </p>
+                <button>Learn More</button>
+            </div>
+            <img src="~/images/infoCard3.jpg" alt="" class="cardPhoto"/>
+        </div>
+        <div class="endBlock"></div>
+        <div class="tripsContainer">
+            <h1>OUR MOST POPULAR TRIPS</h1>
+            <img src="~/images/divider.png" alt=""/>
+            <div class="tableInner">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Amount</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var trip in Model)
+                    {
+                        <tr>
+                            <td>@trip.From</td>
+                            <td>@trip.To</td>
+                            <td>@trip.Amount</td>
+                            <td>From @trip.Price $</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+.serviceBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    img{
+        width: 50px;
+    }
+}
+.servicesRow{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    .service{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        border: 2px solid gainsboro;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 12px 12px 2px 1px transparent;
+        transition: all 0.2s ease-in-out;
+        background: white;
+        scale: 1;
+        h2{
+            color: var(--yellow);
+        }
+        img{
+            width: 50px;
+        }
+    }
+    .service:hover{
+        box-shadow: 12px 12px 2px 1px rgba(18, 117, 188, .2);
+        /*scale: 1.1;*/
+       
+    }
+}
+.contactsBlock{
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*align-items: flex-start;*/
+    /*justify-content: space-between;*/
+    /*gap: 20px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .textContacts{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        h1,h2{
+            color: var(--yellow);
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 24px;
+        }
+    }
+    .inputBlock,form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        max-width: 600px;
+        width: 100%;
+        
+    }
+    .inputBlock div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        span{
+            color: red;
+            margin-left: 5px;
+        }
+    }
+    form{
+        border: 2px solid gainsboro;
+        border-radius: 20px;
+        padding: 20px;
+        input,textarea{
+            width: 100%;
+            padding: 15px;
+            border: 2px solid gainsboro;
+            border-radius: 10px;
+            box-sizing: border-box;
+            resize: none;
+        }
+        textarea{
+            height: 100px;
+        }
+        button{
+            width: 100%;
+        }
+    }
+}

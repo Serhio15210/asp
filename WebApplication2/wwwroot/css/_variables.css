@@ -1,0 +1,29 @@
+
+:root {
+    --white: #FFFFFF;
+    --screen-bg-max: 1919px;
+    --screen-md-max: 1600px;
+    --screen-mac-max: 1300px;
+    --screen-sm-max: 799px;
+    --screen-bg-min: 1920px;
+    --slow: 0.2s;
+    --normal: .2s;
+    --blue:#1275bc;
+    --yellow:#fbb040;
+    --yellowLight:#edd47c;
+    --tableEven:#f9f9f9;
+    --tableOdd:#e6e6e6
+}
+
+/*$white                  : #FFFFFF;*/
+/*$black                  : #000;*/
+/*$red                    : #D13028;*/
+/*$gray-light             : rgba(255, 255, 255, 0.10);*/
+
+/*// transition*/
+/*$fast                   : .2s;*/
+/*$normal                 : .5s;*/
+
+
+ 
+ 

@@ -1,0 +1,64 @@
+@{
+    ViewData["Title"] = "About";
+}
+@model List<AboutTrip>
+@* <h1>@ViewData["Title"]</h1> *@
+<div class="homeMain">
+    <div class="aboutTitleBlock">
+        <p>Who WE Are</p>
+        <h1>ABOUT</h1>
+        <img src="~/images/divider.png" alt=""/>
+    </div>
+    <div class="infoContainer">
+        <div class="textBlock">
+            <h2>Paradise Trip - Unveiling the Wonders of Travel</h2>
+            <img src="~/images/divider.png" alt=""/>
+            <p>
+                Embark on a journey of a lifetime with Paradise Trip, 
+                where every destination is a masterpiece waiting to be explored.
+                Craft your dream itinerary, uncover hidden gems, and immerse yourself in the extraordinary.
+                <br/>
+                Paradise Trip is not just a travel platform; it's your personal gateway to discovering the beauty of the world. Elevate your travel experience, and let Paradise Trip guide you to the paradises that await your exploration.
+                Create memories, embrace adventures, and redefine your notion of the perfect getaway.
+                <br/>
+                Your next extraordinary journey begins with Paradise Trip.
+                Explore the extraordinary, one destination at a time.
+            </p>
+        </div>
+        <img src="~/images/about.jpg" alt="" class="cardPhoto"/>
+    </div>
+    <div class="aboutSelectBlock">
+        <h1>Our Trips</h1>
+        <img src="~/images/divider.png" alt=""/>
+        <select id="selectedTrip" name="selectedTrip" onchange="loadSelectedTrip()">
+            @foreach (var trip in Model)
+            {
+                <option value="@trip.Name" selected=@(trip == Model.FirstOrDefault() ? "selected" : "")>@trip.Name</option>
+            }
+        </select>
+
+        <div id="selectedTripDetails">
+            @Html.Partial("_SelectedTripDetailsPartial", new WebApplication2.Models.AboutTrip())
+        </div>
+    </div>
+        <script>
+            $(document).ready(function () {
+                loadSelectedTrip(document.getElementsByName("selectedTrip")[0].value);
+            });
+            </script>
+     <script>
+         function loadSelectedTrip() {
+             const selectedTrip = $("#selectedTrip").val();
+     
+             $.ajax({
+                 url: "/About/GetSelectedTrip",
+                 type: "GET",
+                 data: { selectedTrip: selectedTrip },
+                 success: function (result) {
+                     $("#selectedTripDetails").html(result);
+                 }
+             });
+         }
+     </script>
+</div>
+ 

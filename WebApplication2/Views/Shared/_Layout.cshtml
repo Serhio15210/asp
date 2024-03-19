@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+    <title>@ViewData["Title"]</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/about.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/services.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/WebApplication2.styles.css" asp-append-version="true"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="@((ViewBag.ActivePage != "home") ? "headerActive" : "")">
+    <nav>
+        <a class="logoBlock" asp-area="" asp-controller="Home" asp-action="Index">
+            <img src="~/images/logo.svg" alt=""/>
+            @* <p>PARADISE TOUR</p> *@
+        </a>
+        <div class="navButtons">
+            <a class="navItem @((ViewBag.ActivePage == "home") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">
+                Home
+            </a>
+            <a class="navItem @((ViewBag.ActivePage == "about") ? "active" : "")" asp-area="" asp-controller="About" asp-action="Index">
+                <p>About</p>
+            </a>
+            <a class="navItem @((ViewBag.ActivePage == "services") ? "active" : "")" asp-area="" asp-controller="Services" asp-action="Index">
+                <p>Services</p>
+            </a>
+            <a class="navItem @((ViewBag.ActivePage == "contacts") ? "active" : "")" asp-area="" asp-controller="Contacts" asp-action="Index">
+                <p>Contacts</p>
+            </a>
+        </div>
+        <button>Book Now</button>
+        <img src="~/images/burger.svg" alt="" class="burgerImg" onclick="toggleMenu()"/>
+    </nav>
+    <div class="mobileMenu">
+        <img src="~/images/close.svg" alt="" onclick="toggleMenu()"/>
+        <a class="navItem @((ViewBag.ActivePage == "home") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">
+            Home
+        </a>
+        <a class="navItem @((ViewBag.ActivePage == "about") ? "active" : "")" asp-area="" asp-controller="About" asp-action="Index">
+            <p>About</p>
+        </a>
+        <a class="navItem @((ViewBag.ActivePage == "services") ? "active" : "")" asp-area="" asp-controller="Services" asp-action="Index">
+            <p>Services</p>
+        </a>
+        <a class="navItem @((ViewBag.ActivePage == "contacts") ? "active" : "")" asp-area="" asp-controller="Contacts" asp-action="Index">
+            <p>Contacts</p>
+        </a>
+        <button>Book Now</button>
+    </div>
+</header>
+<div class="container">
+    <main role="main">
+        @RenderBody()
+    </main>
+</div>
+
+<footer >
+    <img src="~/images/logo.svg" alt="" class="logo"/>
+    <div >
+        &copy; 2024 - Paradise Travel - All rights are reserved
+    </div>
+    <div class="webLogos">
+        <img src="~/images/instagramLogo.svg" alt="" class="logo"/>
+        <img src="~/images/twitterLogo.svg" alt="" class="logo"/>
+        <img src="~/images/facebookLogo.svg" alt="" class="logo"/>
+        <img src="~/images/telegramLogo.svg" alt="" class="logo"/>
+    </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+@* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
